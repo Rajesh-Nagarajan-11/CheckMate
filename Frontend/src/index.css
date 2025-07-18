@@ -1,0 +1,266 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.caterpillar-yellow {
+  background-color: #FFD700;
+}
+
+.caterpillar-yellow-text {
+  color: #FFD700;
+}
+
+.caterpillar-yellow-border {
+  border-color: #FFD700;
+}
+
+/* Enhanced animations and transitions */
+.task-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.learning-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.learning-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-option {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quiz-option:hover {
+  transform: translateX(4px);
+}
+
+.quiz-option.selected {
+  transform: translateX(8px) scale(1.02);
+}
+
+/* Scroll animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC700;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #FFD700;
+}
+
+/* Enhanced shadows and borders */
+.shadow-elevated {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-floating {
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
+}
+
+.border-glow {
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .task-card:hover,
+  .learning-card:hover {
+    transform: none;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Micro-interactions */
+.scale-102:hover {
+  transform: scale(1.02);
+}
+
+.scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Glass morphism effects */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glassmorphism-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  @apply caterpillar-yellow text-black font-medium py-2 px-4 rounded-lg transition-all duration-200 hover:bg-yellow-600 hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95;
+}
+
+.btn-secondary-dark {
+  @apply bg-gray-700 text-gray-200 font-medium py-2 px-4 rounded-lg transition-all duration-200 hover:bg-gray-600 hover:shadow-md active:scale-95;
+}
+
+/* Card styles with raised edges */
+.card-raised {
+  @apply rounded-xl shadow-lg border transition-all duration-300 hover:shadow-xl;
+}
+
+.card-raised-dark {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.card-raised-light {
+  @apply bg-white border-gray-200;
+}
+
+/* Compact spacing utilities */
+.compact-p {
+  padding: 0.75rem;
+}
+
+.compact-px {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.compact-py {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.compact-m {
+  margin: 0.5rem;
+}
+
+.compact-mx {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.compact-my {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
