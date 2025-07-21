@@ -58,7 +58,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ darkMode }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [recognition, setRecognition] = useState<SpeechRecognition | null>(null);
   const [speechSynthesis, setSpeechSynthesis] = useState<SpeechSynthesis | null>(null);
-  const [apiKey, setApiKey] = useState("AIzaSyBiONGVNvMN_oi1L_x54oFBtxJIT1ZnHsw");
+  const [apiKey, setApiKey] = useState("YOUR_API_KEY");
   const [showApiInput, setShowApiInput] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
