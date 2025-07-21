@@ -1,53 +1,51 @@
-🏆 CheckMate — CAT Hackathon 2025 Winning Project
-Team HackaPillar
+# 🏆 CheckMate — CAT Hackathon 2025 Winning Project  
+**Team HackaPillar**
 
-CheckMate is a real-time IoT-powered smart assistant for heavy vehicle operators, built to enhance safety, productivity, and operational efficiency. Winner of the CAT Hackathon 2025, it integrates sensor networks, AI/ML, and cloud technologies to deliver actionable insights and real-time alerts.
+**CheckMate** is a real-time **IoT-powered smart assistant** designed to improve **safety**, **productivity**, and **efficiency** in heavy vehicle operations. This award-winning system integrates sensor technology, machine learning, and cloud infrastructure to deliver critical insights in real-time.
 
-🚀 Core Features
-🔐 RFID-based Operator Authentication
+---
 
-😴 Drowsiness Detection (via Teachable Machine)
+## 🚀 Features
 
-🌡️ Engine Temperature Monitoring
+- 🔐 **RFID-Based Operator Authentication**
+- 😴 **Drowsiness Detection** (Edge Impulse / Teachable Machine)
+- 🌡️ **Engine Temperature Monitoring** (DHT22)
+- 🎯 **Seatbelt Compliance Detection**
+- 🚧 **Obstacle Detection** (HC-SR04)
+- 🧠 **Engine Fault Detection** using ML
+- 📈 **Speed Prediction** using accelerometer data
+- 🏔️ **Terrain Slope Estimation** (MPU6050 + ML)
+- ⏱️ **Task Completion Time Prediction** (ML regression models)
+- 📡 **Real-Time Alerts & Live Dashboard** via WebSockets
 
-🎯 Seatbelt Compliance Detection
+---
 
-🚧 Obstacle Detection (Ultrasonic - HC-SR04)
+## 🧠 Machine Learning Modules
 
-🧠 Engine Fault Detection using ML
+| Feature                  | Model Used               | Input Data                            |
+|--------------------------|---------------------------|----------------------------------------|
+| Speed Prediction         | Linear / Random Forest    | MPU6050 Sensor                         |
+| Slope Estimation         | Regression Model          | Accelerometer + Gyroscope              |
+| Engine Fault Detection   | Classification Model      | Temp, vibration, obstacle sensors      |
+| Task Time Estimation     | Regression Model          | Vehicle ID + Task Metrics              |
 
-📈 Speed Prediction using sensor-driven ML regression
+Models are built in **Python** using **scikit-learn**, and deployed via **FastAPI** for seamless integration.
 
-🏔️ Terrain Slope Estimation via MPU6050 + ML
+---
 
-⏱️ Task Completion Time Prediction using vehicle ID and task data
+## 🛠️ Tech Stack
 
-📡 Live Dashboard & Real-time Alerts using WebSockets
+- **Hardware**: ESP32, RFID Reader, DHT22, HC-SR04, MPU6050
+- **Embedded**: Arduino/C++
+- **Backend**:  
+  - `FastAPI` (ML Model Serving)  
+  - `Node.js + Express` (API Gateway + WebSocket)
+- **Frontend**: React.js (Live Dashboard)
+- **Database**: MongoDB (Operator & Task Logs)
+- **AI Tools**: Scikit-learn, Edge Impulse, Teachable Machine
+- **Protocols**: HTTP, WebSocket
 
-🧠 Machine Learning Modules
-Speed & Slope Estimation:
-Trained using MPU6050 sensor data + regression models (Random Forest, Linear Regression)
-
-Engine Fault Detection:
-ML classification on temperature, vibration, and obstacle data
-
-Task Time Prediction:
-Predicts estimated time of task completion using vehicle type and task metrics
-
-Models deployed via Python FastAPI, integrated with Node.js backend
-
-🧰 Tech Stack
-Hardware: ESP32, RFID, DHT22, MPU6050, HC-SR04
-
-Embedded: Arduino/C++
-
-Backend: FastAPI (ML) + Node.js (REST/WebSocket API)
-
-Frontend: React (live dashboard)
-
-Database: MongoDB
-
-AI Tools: Scikit-learn, Edge Impulse, Teachable Machine
-
-Protocols: HTTP, WebSocket
+---
+Feel free to reach out or contribute!  
+**Team HackaPillar** – CAT Hackathon 2025 Champions
 
