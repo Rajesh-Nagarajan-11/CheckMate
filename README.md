@@ -1,26 +1,53 @@
 🏆 CheckMate — CAT Hackathon 2025 Winning Project
-CheckMate is a real-time IoT-powered smart assistant designed to enhance operator safety and productivity in heavy vehicles. Developed by Team HackaPillar, this project won the CAT Hackathon 2025 for its innovative approach to industrial vehicle monitoring.
+Team HackaPillar
 
-🚜 Key Features
+CheckMate is a real-time IoT-powered smart assistant for heavy vehicle operators, built to enhance safety, productivity, and operational efficiency. Winner of the CAT Hackathon 2025, it integrates sensor networks, AI/ML, and cloud technologies to deliver actionable insights and real-time alerts.
+
+🚀 Core Features
 🔐 RFID-based Operator Authentication
 
-😴 Drowsiness Detection using AI/ML (Teachable Machine / Edge Impulse)
+😴 Drowsiness Detection (via Teachable Machine)
 
-🌡️ Engine Temperature Monitoring via Sensors (DHT22, etc.)
+🌡️ Engine Temperature Monitoring
 
 🎯 Seatbelt Compliance Detection
 
-🚧 Obstacle Detection using Ultrasonic Sensors
+🚧 Obstacle Detection (Ultrasonic - HC-SR04)
 
-📡 Real-time Alerts & Monitoring Dashboard
+🧠 Engine Fault Detection using ML
 
-🛠️ Tech Stack
-ESP32 + Arduino for sensor integration
+📈 Speed Prediction using sensor-driven ML regression
 
-FastAPI for backend services
+🏔️ Terrain Slope Estimation via MPU6050 + ML
 
-MongoDB for data storage
+⏱️ Task Completion Time Prediction using vehicle ID and task data
 
-React for the operator dashboard
+📡 Live Dashboard & Real-time Alerts using WebSockets
 
-WebSockets for live updates
+🧠 Machine Learning Modules
+Speed & Slope Estimation:
+Trained using MPU6050 sensor data + regression models (Random Forest, Linear Regression)
+
+Engine Fault Detection:
+ML classification on temperature, vibration, and obstacle data
+
+Task Time Prediction:
+Predicts estimated time of task completion using vehicle type and task metrics
+
+Models deployed via Python FastAPI, integrated with Node.js backend
+
+🧰 Tech Stack
+Hardware: ESP32, RFID, DHT22, MPU6050, HC-SR04
+
+Embedded: Arduino/C++
+
+Backend: FastAPI (ML) + Node.js (REST/WebSocket API)
+
+Frontend: React (live dashboard)
+
+Database: MongoDB
+
+AI Tools: Scikit-learn, Edge Impulse, Teachable Machine
+
+Protocols: HTTP, WebSocket
+
