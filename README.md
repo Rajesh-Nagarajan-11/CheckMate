@@ -1,4 +1,4 @@
-# 🏆 CheckMate — CAT Hackathon 2025 Winning Project  
+# 🏆 CheckMate — CATERPILLAR Hackathon 2025 Winning Project  
 **Team HackaPillar**
 
 **CheckMate** is a real-time **IoT-powered smart assistant** designed to improve **safety**, **productivity**, and **efficiency** in heavy vehicle operations. This award-winning system integrates **sensor networks**, **AI/ML models**, and an intelligent **chatbot assistant** powered by the **Gemini API**, delivering critical operational insights and support to operators on the field.
